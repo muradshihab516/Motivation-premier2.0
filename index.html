@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="header">
+        <h1>📋 সাপোর্ট লিস্ট জেনারেটর</h1>
+        <p>লিস্ট পেস্ট করুন এবং স্বয়ংক্রিয়ভাবে সাপোর্টার ও আনসাপোর্টার আলাদা করুন</p>
+    </div>
+
+    <div class="input-section">
+        <label>📝 এখানে আপনার লিস্ট পেস্ট করুন <span>*</span></label>
+        <textarea id="inputList" placeholder="এখানে আপনার সম্পূর্ণ লিস্ট পেস্ট করুন...
+
+উদাহরণ:
+📅 তারিখ: 03-02-26 
+📆 বার: মঙ্গলবার 
+যারা লিংক দিয়েছেন তাদের তালিকা 
+👇👇👇
+
+1️⃣➤@Nil Hasan ✅
+2️⃣➤@Amdadur Rahman 
+3️⃣➤@Kobir Khan ✅
+..."></textarea>
+        <button class="generate-btn" onclick="generateLists()">🚀 Generate List</button>
+    </div>
+
+    <div class="output-section" id="outputSection">
+        <div class="summary-section">
+            <div class="summary-card total">
+                <div class="number" id="totalCount">0</div>
+                <div class="label">মোট মেম্বার</div>
+            </div>
+            <div class="summary-card done">
+                <div class="number" id="doneCount">0</div>
+                <div class="label">সাপোর্ট করেছে</div>
+            </div>
+            <div class="summary-card pending">
+                <div class="number" id="pendingCount">0</div>
+                <div class="label">বাকি আছে</div>
+            </div>
+            <div class="summary-card nopost">
+                <div class="number" id="nopostCount">0</div>
+                <div class="label">No Post</div>
+            </div>
+        </div>
+
+        <div class="output-box done-box">
+            <div class="output-header">
+                <div class="output-title">✅ All Done List (সাপোর্টার তালিকা)</div>
+                <button class="copy-btn done-btn" onclick="copyDoneList()">📋 Copy All Done List</button>
+            </div>
+            <div class="output-content" id="doneList"></div>
+        </div>
+
+        <div class="output-box unsupport-box">
+            <div class="output-header">
+                <div class="output-title">❌ Unsupporter List (বাকি থাকা তালিকা)</div>
+                <button class="copy-btn unsupport-btn" onclick="copyUnsupportList()">📋 Copy Unsupporter List</button>
+            </div>
+            <div class="output-content" id="unsupportList"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>💡 টিপস: ✅ চিহ্ন দিয়ে সাপোর্টার চিহ্নিত করুন</p>
+    </div>
+</div>
